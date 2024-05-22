@@ -1,80 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project Documentation</title>
-  <style>
-    /* Простые стили для улучшения внешнего вида */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-    main {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 40px;
-    }
-    h1, h2, h3 {
-      margin-top: 40px;
-    }
-    p, ul, ol {
-      line-height: 1.5;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOOP Language Documentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url("https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/github/github.png");
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+        }
+        
+        h1, h2, h3 {
+            color: #00d8ff;
+        }
+        
+        pre {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Project Documentation</h1>
-  </header>
-  
-  <main>
-    <h2>Introduction</h2>
-    <p>This document provides a comprehensive overview of the project, including its purpose, features, and technical details.</p>
-    
-    <h2>Project Overview</h2>
-    <p>Provide a high-level description of the project, its goals, and the problems it aims to solve.</p>
-    
-    <h2>Features</h2>
-    <ul>
-      <li>Feature 1</li>
-      <li>Feature 2</li>
-      <li>Feature 3</li>
-    </ul>
-    
-    <h2>Technical Details</h2>
-    <h3>Architecture</h3>
-    <p>Describe the overall architecture of the project, including the main components and how they interact.</p>
-    
-    <h3>Technologies Used</h3>
-    <ul>
-      <li>Technology 1</li>
-      <li>Technology 2</li>
-      <li>Technology 3</li>
-    </ul>
-    
-    <h2>Installation and Setup</h2>
-    <ol>
-      <li>Step 1: Install the required dependencies</li>
-      <li>Step 2: Configure the project settings</li>
-      <li>Step 3: Run the project</li>
-    </ol>
-    
-    <h2>Usage</h2>
-    <p>Provide instructions on how to use the project, including any relevant screenshots or examples.</p>
-    
-    <h2>Contribution</h2>
-    <p>Explain how users can contribute to the project, such as reporting issues, submitting bug fixes, or suggesting new features.</p>
-    
-    <h2>License</h2>
-    <p>Include information about the project's license, if applicable.</p>
-  </main>
+    <div class="container">
+        <h1>SOOP Language Documentation</h1>
+        
+        <h2>Key Words</h2>
+        <ul>
+            <li><code>namespace</code> - Define a namespace for classes and interfaces.</li>
+            <li><code>class</code> - Declare a class.</li>
+            <li><code>interface</code> - Declare an interface.</li>
+            <li><code>def</code> - Declare a method.</li>
+            <li><code>if</code>, <code>else</code> - Conditional statements.</li>
+            <li><code>for</code>, <code>in</code>, <code>while</code> - Looping constructs.</li>
+            <li><code>switch</code>, <code>case</code> - Multi-way selection.</li>
+            <li><code>return</code> - Return from a method.</li>
+            <li><code>public</code>, <code>private</code>, <code>protected</code> - Access modifiers.</li>
+        </ul>
+        
+        <h2>Language Constructs</h2>
+        <h3>Namespaces</h3>
+        <pre>
+namespace MyProject {
+    class MyClass {
+        // ...
+    }
+}
+</pre>
+        
+        <h3>Classes</h3>
+        <pre>
+class MyClass {
+    public def myMethod(arg1: int, arg2: string) : int {
+        // Method implementation
+    }
+}
+</pre>
+        
+        <h3>Interfaces</h3>
+        <pre>
+interface IMyInterface {
+    def myMethod(arg1: int) : int;
+}
+</pre>
+        
+        <h3>Methods</h3>
+        <pre>
+class MyClass {
+    public def myMethod(arg1: int, arg2: string) : int {
+        // Method implementation
+        return 42;
+    }
+}
+</pre>
+        
+        <h3>Control Structures</h3>
+        <pre>
+if (x > 0) {
+    // Execute if x > 0
+} else {
+    // Execute if x <= 0
+}
+
+for (i in 0..9) {
+    // Iterate from 0 to 9
+}
+
+while (x < 100) {
+    // Execute while x < 100
+}
+
+switch (x) {
+    case 1:
+        // Execute if x == 1
+    case 2:
+        // Execute if x == 2
+    default:
+        // Execute if none of the above conditions match
+}
+</pre>
+        
+        <h3>Access Modifiers</h3>
+        <pre>
+class MyClass {
+    public x: int = 0; // Accessible from anywhere
+    private y: int = 0; // Accessible only within the class
+    protected z: int = 0; // Accessible within the class and derived classes
+}
+</pre>
+    </div>
 </body>
-</html>
+    </html>
